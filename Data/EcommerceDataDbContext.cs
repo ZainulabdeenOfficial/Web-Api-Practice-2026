@@ -28,7 +28,7 @@ namespace Ecom.Data
             .HasForeignKey(my => my.UserId);
 
 
-            modelBuilder.Entity<UserRole>().HasOne(my => my.User).WithMany(u => u.UsersRole)
+            modelBuilder.Entity<UserRole>().HasOne(my => my.Role).WithMany(r => r.UsersRole)
 
             .HasForeignKey(my => my.RoleId);
         }
